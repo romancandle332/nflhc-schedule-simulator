@@ -1087,10 +1087,31 @@ while x < 6:
             x += 1
             teams_in.append(team)
         NFC_tiebreaker.pop(conference_bucket.index(max(conference_bucket)))
+
+##Draft Order
+t = 1
+draftbook = []
+while t < len(database):
+    a = database[t][0]
+    b = database[t][1]
+    sos = 0
+    r = 0
+    while r < len(database[t][3]):
+        c = nflindex[database[t][3][r]]
+        d = database[c][1]
+        sos += d
+        r += 1
+    e = round((sos/(17*17)),3)
+    draftbook.append([a,b,e])
+    t += 1
+
+draftbook.sort(key=lambda x:x[2])
+draftbook.sort(key=lambda x:x[1])
 filename ="scheduleoutput.csv"
 with open(filename, "w",encoding="utf8") as output:
         writer = csv.writer(output, lineterminator="\n")
         writer.writerows(database)
         writer.writerows(playoffs)
+        writer.writerows(draftbook)
 
 print(teams_in)
