@@ -1,8 +1,11 @@
 import math
 import random
 import csv
+import time
 
-loop = 100 ##Number of times to run
+print(time.asctime())
+
+loop = 10000 ##Number of times to run
 
 ##easy index since the order will be the same
 nflindex = {
@@ -41,38 +44,38 @@ nflindex = {
 
 ##Strength of Team Value
 strength = {
-    'ARI': .063,
+    'ARI': .209,
     'ATL': .500,
-    'BAL': .750,
-    'BUF': .688,
-    'CAR': .250,
-    'CHI': .563,
-    'CIN': .438,
-    'CLE': .250,
-    'DAL': .563,
-    'DEN': .563,
-    'DET': .750,
-    'GB': .625,
-    'HOU': .188,
+    'BAL': .667,
+    'BUF': .625,
+    'CAR': .333,
+    'CHI': .542,
+    'CIN': .459,
+    'CLE': .333,
+    'DAL': .542,
+    'DEN': .542,
+    'DET': .667,
+    'GB': .583,
+    'HOU': .292,
     'IND': .500,
-    'JAX': .438,
-    'KC': .688,
-    'LAC': .188,
+    'JAX': .459,
+    'KC': .626,
+    'LAC': .292,
     'LAR': .500,
-    'LV': .750,
-    'MIA': .438,
-    'MIN': .313,
-    'NE': .250,
-    'NO': .563,
+    'LV': .667,
+    'MIA': .459,
+    'MIN': .375,
+    'NE': .33,
+    'NO': .542,
     'NYG': .500,
-    'NYJ': .438,
-    'PHI': .750,
-    'PIT': .750,
-    'SEA': .625,
-    'SF': .563,
-    'TB': .063,
-    'TEN': .750,
-    'WFT': .750}
+    'NYJ': .459,
+    'PHI': .667,
+    'PIT': .667,
+    'SEA': .583,
+    'SF': .542,
+    'TB': .209,
+    'TEN': .667,
+    'WFT': .667}
 
 ##for divisionalstuff
 division = {
@@ -144,40 +147,40 @@ conference = {
     'TEN': 'AFC',
     'WFT': 'NFC'}
 
-##shortcuts          0        1            2                3              4                    5
-macro_database = [['Team','Avg Wins','Division Crowns','Wildcards','Playoff Appearances','Avg Draft Position'],
-                  ['ARI',0,0,0,0,0],
-                  ['ATL',0,0,0,0,0],
-                  ['BAL',0,0,0,0,0],
-                  ['BUF',0,0,0,0,0],
-                  ['CAR',0,0,0,0,0],
-                  ['CHI',0,0,0,0,0],
-                  ['CIN',0,0,0,0,0],
-                  ['CLE',0,0,0,0,0],
-                  ['DAL',0,0,0,0,0],
-                  ['DEN',0,0,0,0,0],
-                  ['DET',0,0,0,0,0],
-                  ['GB',0,0,0,0,0],
-                  ['HOU',0,0,0,0,0],
-                  ['IND',0,0,0,0,0],
-                  ['JAX',0,0,0,0,0],
-                  ['KC',0,0,0,0,0],
-                  ['LAC',0,0,0,0,0],
-                  ['LAR',0,0,0,0,0],
-                  ['LV',0,0,0,0,0],
-                  ['MIA',0,0,0,0,0],
-                  ['MIN',0,0,0,0,0],
-                  ['NE',0,0,0,0,0],
-                  ['NO',0,0,0,0,0],
-                  ['NYG',0,0,0,0,0],
-                  ['NYJ',0,0,0,0,0],
-                  ['PHI',0,0,0,0,0],
-                  ['PIT',0,0,0,0,0],
-                  ['SEA',0,0,0,0,0],
-                  ['SF',0,0,0,0,0],
-                  ['TB',0,0,0,0,0],
-                  ['TEN',0,0,0,0,0],
-                  ['WFT',0,0,0,0,0]]
+##shortcuts          0        1            2                3              4                    5                   6
+macro_database = [['Team','Avg Wins','Division Crowns','Wildcards','Playoff Appearances','Avg Draft Position','Top 5 Picks'],
+                  ['ARI',0,0,0,0,0,0],
+                  ['ATL',0,0,0,0,0,0],
+                  ['BAL',0,0,0,0,0,0],
+                  ['BUF',0,0,0,0,0,0],
+                  ['CAR',0,0,0,0,0,0],
+                  ['CHI',0,0,0,0,0,0],
+                  ['CIN',0,0,0,0,0,0],
+                  ['CLE',0,0,0,0,0,0],
+                  ['DAL',0,0,0,0,0,0],
+                  ['DEN',0,0,0,0,0,0],
+                  ['DET',0,0,0,0,0,0],
+                  ['GB',0,0,0,0,0,0],
+                  ['HOU',0,0,0,0,0,0],
+                  ['IND',0,0,0,0,0,0],
+                  ['JAX',0,0,0,0,0,0],
+                  ['KC',0,0,0,0,0,0],
+                  ['LAC',0,0,0,0,0,0],
+                  ['LAR',0,0,0,0,0,0],
+                  ['LV',0,0,0,0,0,0],
+                  ['MIA',0,0,0,0,0,0],
+                  ['MIN',0,0,0,0,0,0],
+                  ['NE',0,0,0,0,0,0],
+                  ['NO',0,0,0,0,0,0],
+                  ['NYG',0,0,0,0,0,0],
+                  ['NYJ',0,0,0,0,0,0],
+                  ['PHI',0,0,0,0,0,0],
+                  ['PIT',0,0,0,0,0,0],
+                  ['SEA',0,0,0,0,0,0],
+                  ['SF',0,0,0,0,0,0],
+                  ['TB',0,0,0,0,0,0],
+                  ['TEN',0,0,0,0,0,0],
+                  ['WFT',0,0,0,0,0,0]]
 
 year = 0
 while year < loop:
@@ -1190,18 +1193,20 @@ while year < loop:
         q = nflindex[draftbook[w][0]]
         pick = w + 1
         macro_database[q][5] += pick
+        if w <= 4:
+            macro_database[q][6] += 1
         w += 1
 
     ##print(teams_in)
-    print("Year #",year+1,"complete")
+    ##print("Year #",year+1,"complete")
     year += 1
 
 w = 1
 while w < len(macro_database):
     wins = int(macro_database[w][1])
-    macro_database[w][1] = wins / loop
+    macro_database[w][1] = round(wins / loop,1)
     draft = int(macro_database[w][5])
-    macro_database[w][5] = draft / loop
+    macro_database[w][5] = round(draft / loop,1)
     macro_database[w][4] = macro_database[w][2] + macro_database[w][3]
     w += 1
 print(macro_database)
@@ -1210,3 +1215,4 @@ filename ="macrooutput.csv"
 with open(filename, "w",encoding="utf8") as output:
         writer = csv.writer(output, lineterminator="\n")
         writer.writerows(macro_database)
+print(time.asctime())
