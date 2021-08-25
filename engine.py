@@ -44,7 +44,7 @@ nflindex = {
 
 ##Strength of Team Value
 strength = {
-    'ARI': .3281,
+    'ARI': .281,
     'ATL': .500,
     'BAL': .625,
     'BUF': .594,
