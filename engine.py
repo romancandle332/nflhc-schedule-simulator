@@ -44,38 +44,38 @@ nflindex = {
 
 ##Strength of Team Value
 strength = {
-    'ARI': .209,
+    'ARI': .3281,
     'ATL': .500,
-    'BAL': .667,
-    'BUF': .625,
-    'CAR': .333,
-    'CHI': .542,
-    'CIN': .459,
-    'CLE': .333,
-    'DAL': .542,
-    'DEN': .542,
-    'DET': .667,
-    'GB': .583,
-    'HOU': .292,
+    'BAL': .625,
+    'BUF': .594,
+    'CAR': .375,
+    'CHI': .531,
+    'CIN': .469,
+    'CLE': .375,
+    'DAL': .531,
+    'DEN': .531,
+    'DET': .625,
+    'GB': .563,
+    'HOU': .344,
     'IND': .500,
-    'JAX': .459,
-    'KC': .626,
-    'LAC': .292,
+    'JAX': .469,
+    'KC': .594,
+    'LAC': .344,
     'LAR': .500,
-    'LV': .667,
-    'MIA': .459,
-    'MIN': .375,
-    'NE': .33,
-    'NO': .542,
+    'LV': .625,
+    'MIA': .469, 
+    'MIN': .406,
+    'NE': .375,
+    'NO': .531,
     'NYG': .500,
-    'NYJ': .459,
-    'PHI': .667,
-    'PIT': .667,
-    'SEA': .583,
-    'SF': .542,
-    'TB': .209,
-    'TEN': .667,
-    'WFT': .667}
+    'NYJ': .469,
+    'PHI': .625,
+    'PIT': .625,
+    'SEA': .531,
+    'SF': .563,
+    'TB': .281,
+    'TEN': .625,
+    'WFT': .625}
 
 ##for divisionalstuff
 division = {
@@ -229,10 +229,11 @@ while year < loop:
     while i < len(schedule):
         a = schedule[i][1] ##away
         b = schedule[i][2] ##home
-        c = strength[a]
-        d = strength[b]
+        week = int(schedule[i][0])
         e = nflindex[a]
         f = nflindex[b]
+        c = strength[a]
+        d = strength[b]
         x = database[e][6]
         x_2 = x + d
         y = database[e][8]
@@ -252,8 +253,8 @@ while year < loop:
         database[f][6] = z_2
         database[f][7] = w_2
 
-        c -= .029
-        d += .029
+        c += 0.029
+        d -= 0.029
 
         home_win = (d-d*c)/(d+c-2*d*c)
         roll = random.random()
