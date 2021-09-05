@@ -44,38 +44,38 @@ nflindex = {
 
 ##Strength of Team Value
 strength = {
-    'ARI': .281,
-    'ATL': .500,
-    'BAL': .625,
-    'BUF': .594,
-    'CAR': .375,
-    'CHI': .531,
-    'CIN': .469,
-    'CLE': .375,
-    'DAL': .531,
-    'DEN': .531,
-    'DET': .625,
-    'GB': .563,
-    'HOU': .344,
-    'IND': .500,
-    'JAX': .469,
-    'KC': .594,
-    'LAC': .344,
-    'LAR': .500,
-    'LV': .625,
-    'MIA': .469, 
-    'MIN': .406,
-    'NE': .375,
-    'NO': .531,
-    'NYG': .500,
-    'NYJ': .469,
-    'PHI': .625,
-    'PIT': .625,
-    'SEA': .531,
-    'SF': .563,
-    'TB': .281,
-    'TEN': .625,
-    'WFT': .625}
+    'ARI': .294,
+    'ATL': .706,
+    'BAL': .706,
+    'BUF': .441,
+    'CAR': .294,
+    'CHI': .441,
+    'CIN': .294,
+    'CLE': .118,
+    'DAL': .558,
+    'DEN': .441,
+    'DET': .559,
+    'GB': .559,
+    'HOU': .118,
+    'IND': .441,
+    'JAX': .559,
+    'KC': .706,
+    'LAC': .441,
+    'LAR': .294,
+    'LV': .706,
+    'MIA': .441, 
+    'MIN': .559,
+    'NE': .294,
+    'NO': .294,
+    'NYG': .441,
+    'NYJ': .559,
+    'PHI': .912,
+    'PIT': .559,
+    'SEA': .559,
+    'SF': .559,
+    'TB': .118,
+    'TEN': .706,
+    'WFT': .706}
 
 ##for divisionalstuff
 division = {
@@ -147,40 +147,40 @@ conference = {
     'TEN': 'AFC',
     'WFT': 'NFC'}
 
-##shortcuts          0        1            2                3              4                    5                   6
-macro_database = [['Team','Avg Wins','Division Crowns','Wildcards','Playoff Appearances','Avg Draft Position','Top 5 Picks'],
-                  ['ARI',0,0,0,0,0,0],
-                  ['ATL',0,0,0,0,0,0],
-                  ['BAL',0,0,0,0,0,0],
-                  ['BUF',0,0,0,0,0,0],
-                  ['CAR',0,0,0,0,0,0],
-                  ['CHI',0,0,0,0,0,0],
-                  ['CIN',0,0,0,0,0,0],
-                  ['CLE',0,0,0,0,0,0],
-                  ['DAL',0,0,0,0,0,0],
-                  ['DEN',0,0,0,0,0,0],
-                  ['DET',0,0,0,0,0,0],
-                  ['GB',0,0,0,0,0,0],
-                  ['HOU',0,0,0,0,0,0],
-                  ['IND',0,0,0,0,0,0],
-                  ['JAX',0,0,0,0,0,0],
-                  ['KC',0,0,0,0,0,0],
-                  ['LAC',0,0,0,0,0,0],
-                  ['LAR',0,0,0,0,0,0],
-                  ['LV',0,0,0,0,0,0],
-                  ['MIA',0,0,0,0,0,0],
-                  ['MIN',0,0,0,0,0,0],
-                  ['NE',0,0,0,0,0,0],
-                  ['NO',0,0,0,0,0,0],
-                  ['NYG',0,0,0,0,0,0],
-                  ['NYJ',0,0,0,0,0,0],
-                  ['PHI',0,0,0,0,0,0],
-                  ['PIT',0,0,0,0,0,0],
-                  ['SEA',0,0,0,0,0,0],
-                  ['SF',0,0,0,0,0,0],
-                  ['TB',0,0,0,0,0,0],
-                  ['TEN',0,0,0,0,0,0],
-                  ['WFT',0,0,0,0,0,0]]
+##shortcuts          0        1            2                3              4                    5                   6           7
+macro_database = [['Team','Avg Wins','Division Crowns','Wildcards','Playoff Appearances','Avg Draft Position','Top 5 Picks','#1 Pick'],
+                  ['ARI',0,0,0,0,0,0,0],
+                  ['ATL',0,0,0,0,0,0,0],
+                  ['BAL',0,0,0,0,0,0,0],
+                  ['BUF',0,0,0,0,0,0,0],
+                  ['CAR',0,0,0,0,0,0,0],
+                  ['CHI',0,0,0,0,0,0,0],
+                  ['CIN',0,0,0,0,0,0,0],
+                  ['CLE',0,0,0,0,0,0,0],
+                  ['DAL',0,0,0,0,0,0,0],
+                  ['DEN',0,0,0,0,0,0,0],
+                  ['DET',0,0,0,0,0,0,0],
+                  ['GB',0,0,0,0,0,0,0],
+                  ['HOU',0,0,0,0,0,0,0],
+                  ['IND',0,0,0,0,0,0,0],
+                  ['JAX',0,0,0,0,0,0,0],
+                  ['KC',0,0,0,0,0,0,0],
+                  ['LAC',0,0,0,0,0,0,0],
+                  ['LAR',0,0,0,0,0,0,0],
+                  ['LV',0,0,0,0,0,0,0],
+                  ['MIA',0,0,0,0,0,0,0],
+                  ['MIN',0,0,0,0,0,0,0],
+                  ['NE',0,0,0,0,0,0,0],
+                  ['NO',0,0,0,0,0,0,0],
+                  ['NYG',0,0,0,0,0,0,0],
+                  ['NYJ',0,0,0,0,0,0,0],
+                  ['PHI',0,0,0,0,0,0,0],
+                  ['PIT',0,0,0,0,0,0,0],
+                  ['SEA',0,0,0,0,0,0,0],
+                  ['SF',0,0,0,0,0,0,0],
+                  ['TB',0,0,0,0,0,0,0],
+                  ['TEN',0,0,0,0,0,0,0],
+                  ['WFT',0,0,0,0,0,0,0]]
 
 year = 0
 while year < loop:
@@ -1196,10 +1196,18 @@ while year < loop:
         macro_database[q][5] += pick
         if w <= 4:
             macro_database[q][6] += 1
+        if w == 0:
+            macro_database[q][7] += 1
         w += 1
 
     ##print(teams_in)
     ##print("Year #",year+1,"complete")
+##    filename ="season"+str(year)+".csv"
+##    with open(filename, "w",encoding="utf8") as output:
+##            writer = csv.writer(output, lineterminator="\n")
+##            writer.writerows(database)
+##            writer.writerows(teams_in)
+##            writer.writerows(draftbook)
     year += 1
 
 w = 1
